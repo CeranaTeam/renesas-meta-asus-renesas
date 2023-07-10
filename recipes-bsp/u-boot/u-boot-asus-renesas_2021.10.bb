@@ -4,7 +4,7 @@ require u-boot.inc
 DEPENDS += "bc-native dtc-native"
 
 UBOOT_URL = "git://github.com/TinkerBoard/renesas-renesas-u-boot-cip.git"
-BRANCH = "main"
+BRANCH = "linux5.10-rzfive"
 
 SRC_URI = "${UBOOT_URL};branch=${BRANCH}"
 SRCREV = "accbe020795de6850aca6b1a12fae4efff897763"

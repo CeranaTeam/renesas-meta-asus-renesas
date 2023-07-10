@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
 KERNEL_URL = " \
     git://github.com/TinkerBoard/renesas-rz_linux-cip.git"
-BRANCH = "main"
+BRANCH = "linux5.10-rzfive"
 SRCREV = "96fd24eb1dab7836871bd57dfdb5d772ef673bf8"
 
 SRC_URI = "${KERNEL_URL};protocol=https;nocheckout=1;branch=${BRANCH}"
