@@ -1,0 +1,40 @@
+From b782149a27cc4d9b4ec2626c4ab8e707e0fe8e03 Mon Sep 17 00:00:00 2001
+From: Rock Shen <rock_shen@asus.com>
+Date: Tue, 26 Sep 2023 14:59:03 +0800
+Subject: [PATCH] dts: disable SPI0
+
+Change-Id: Iaa4a52a5a6e3010d62bc27f27158b9b35651e573
+Signed-off-by: Rock Shen <rock_shen@asus.com>
+---
+ arch/riscv/boot/dts/renesas/r9a07g043f01-tinker-v.dtsi | 2 +-
+ arch/riscv/configs/tinker_v_defconfig                  | 1 -
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/arch/riscv/boot/dts/renesas/r9a07g043f01-tinker-v.dtsi b/arch/riscv/boot/dts/renesas/r9a07g043f01-tinker-v.dtsi
+index 872119dc5334..4567e256cc94 100755
+--- a/arch/riscv/boot/dts/renesas/r9a07g043f01-tinker-v.dtsi
++++ b/arch/riscv/boot/dts/renesas/r9a07g043f01-tinker-v.dtsi
+@@ -539,7 +539,7 @@
+ &spi0 {
+ 	pinctrl-0 = <&spi0_pins>;
+ 	pinctrl-names = "default";
+-	status = "okay";
++	status = "disabled";
+ 
+ 	spidev@0 {
+ 		compatible = "rohm,dh2228fv";
+diff --git a/arch/riscv/configs/tinker_v_defconfig b/arch/riscv/configs/tinker_v_defconfig
+index acd0b5e7ffc1..0d77f4f6967c 100644
+--- a/arch/riscv/configs/tinker_v_defconfig
++++ b/arch/riscv/configs/tinker_v_defconfig
+@@ -90,7 +90,6 @@ CONFIG_I2C_MUX=y
+ CONFIG_I2C_RIIC=y
+ CONFIG_SPI=y
+ CONFIG_SPI_RSPI=y
+-CONFIG_SPI_SPIDEV=y
+ CONFIG_SPI_RPCIF=y
+ CONFIG_RENESAS_RPCIF=y
+ CONFIG_SPMI=y
+-- 
+2.17.1
+

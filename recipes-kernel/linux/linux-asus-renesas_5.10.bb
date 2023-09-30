@@ -27,6 +27,7 @@ PR = "r1"
 
 SRC_URI_append = "\
   file://touch.cfg \
+  file://0001-dts-disable-SPI0.patch \
 "
 
 DEFAULT_PREFERENCE = "1"
